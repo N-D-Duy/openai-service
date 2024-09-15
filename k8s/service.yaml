@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: openai-service
+  labels:
+    app: openai-service
+    service: openai-service
+spec:
+  ports:
+  - port: 9080
+    targetPort: 8000
+    name: http
+  selector:
+    app: openai-service

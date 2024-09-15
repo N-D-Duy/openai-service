@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: openai-deployment
+  labels:
+    app: openai
+    version: v1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: openai
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: openai
+        version: v1
+    spec:
+      serviceAccountName: openai-service-account
+      containers:
+      - name: openai
+        image: docker.io/duynguyen03/openai:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
