@@ -1,0 +1,33 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environment folders
+venv/
+myenv/
+*.env
+
+# Ignore database files
+*.sqlite3
+
+# Ignore local Django settings
+*.local
+
+# Ignore static and media files (nếu bạn thu thập chúng bên ngoài Docker)
+staticfiles/
+media/
+
+# Ignore compiled files (nếu có)
+*.swp
+*.log
+*.bak
+*.orig
+*.DS_Store
+
+# Ignore git and version control
+.git/
+.gitignore
+
+# Ignore IDE settings
+.vscode/
+.idea/

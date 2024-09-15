@@ -1,0 +1,6 @@
+POST http://127.0.0.1:8000/api/chat/
+Content-Type: application/json
+
+{
+    "text": "Heart rate: 85 bpm\nBlood pressure: 120/80 mmHg"
+}
