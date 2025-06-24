@@ -1,7 +1,6 @@
 services:
   web:
     container_name: health-openai
-    image: duynguyen03/openai
     build:
       context: .
       dockerfile: Dockerfile
@@ -12,3 +11,9 @@ services:
       - "8000:8000"
     environment:
       - DEBUG=1
+    restart: always
+    networks:
+      - health-management_health-management-network
+networks:
+  health-management_health-management-network:
+    external: true

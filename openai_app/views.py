@@ -11,10 +11,11 @@ endpoint = os.getenv("API_ENDPOINT")
 key = os.getenv("API_KEY")
 deployment = os.getenv("API_DEPLOYMENT")
 model = os.getenv("API_MODEL")
+api_version = os.getenv("API_VERSION")
 
 client = AzureOpenAI(
     azure_endpoint=endpoint,
-    api_version="2024-05-01-preview",
+    api_version=api_version,
     azure_deployment=deployment,
     api_key=key
 )
