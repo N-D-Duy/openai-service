@@ -4,3 +4,38 @@ Content-Type: application/json
 {
     "medicines": "Heart rate: 85 bpm\nBlood pressure: 120/80 mmHg"
 }
+
+###
+
+GET http://127.0.0.1:8000/api/symptoms/
+
+###
+
+GET http://127.0.0.1:8000/api/diseases/
+
+###
+
+POST http://127.0.0.1:8000/api/diagnose/
+Content-Type: application/json
+
+{
+    "symptoms": ["Headache", "Nausea", "Light sensitivity"]
+}
+
+###
+
+POST http://127.0.0.1:8000/api/diagnose/
+Content-Type: application/json
+
+{
+    "symptoms": ["Cough", "Sore throat", "Fever"]
+}
+
+###
+
+POST http://127.0.0.1:8000/api/diagnose/
+Content-Type: application/json
+
+{
+    "symptoms": ["Sadness", "Loss of interest", "Trouble sleeping"]
+}

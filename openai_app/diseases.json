@@ -1,0 +1,47 @@
+{
+  "NEUROLOGIST": [
+    "Chronic headache",
+    "Migraine",
+    "Epilepsy",
+    "Parkinson's disease",
+    "Alzheimer's disease",
+    "Stroke",
+    "Sleep disorders",
+    "Sciatica",
+    "Vestibular disorder"
+  ],
+  "PEDIATRICIAN": [
+    "Viral fever",
+    "Bronchitis",
+    "Pneumonia",
+    "Diarrhea",
+    "Vomiting",
+    "Ear infection",
+    "Allergy",
+    "Rash",
+    "Malnutrition",
+    "Developmental delay",
+    "Sore throat",
+    "Tonsillitis"
+  ],
+  "DIETICIAN": [
+    "Obesity",
+    "Malnutrition",
+    "Diabetes (diet support)",
+    "High cholesterol",
+    "Digestive disorders",
+    "Cancer nutrition support",
+    "Post-surgery nutrition",
+    "Sports nutrition"
+  ],
+  "PSYCHOLOGIST": [
+    "Depression",
+    "Anxiety disorder",
+    "Chronic stress",
+    "Insomnia (psychological)",
+    "Obsessive-compulsive disorder (OCD)",
+    "Bipolar disorder",
+    "Autism spectrum disorder",
+    "Eating disorder"
+  ]
+}
