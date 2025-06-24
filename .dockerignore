@@ -31,3 +31,5 @@ media/
 # Ignore IDE settings
 .vscode/
 .idea/
+
+**/__pycache__/
