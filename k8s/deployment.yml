@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: openai
+  labels:
+    app: openai
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: openai
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: openai
+        version: v1
+    spec:
+      serviceAccountName: openai-service-account
+      containers:
+      - name: openai
+        image: docker.io/duynguyen03/openai-service:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
+        env:
+        - name: API_ENDPOINT
+          valueFrom:
+            secretKeyRef:
+              name: openai-secret
+              key: API_ENDPOINT
+        - name: API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: openai-secret
+              key: API_KEY
+        - name: API_DEPLOYMENT
+          valueFrom:
+            secretKeyRef:
+              name: openai-secret
+              key: API_DEPLOYMENT
+        - name: API_MODEL
+          valueFrom:
+            secretKeyRef:
+              name: openai-secret
+              key: API_MODEL
+        - name: API_VERSION
+          valueFrom:
+            secretKeyRef:
+              name: openai-secret
+              key: API_VERSION

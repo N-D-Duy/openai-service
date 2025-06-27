@@ -1,4 +1,4 @@
 .env
 myapi/.env
 env
-k8s/secrets.yaml
+k8s/secret.yml
